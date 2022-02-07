@@ -3,11 +3,11 @@ import PostContext from "./PostContext";
 import user from '../src/img/user.png';
 import { useNavigate } from "react-router-dom";
 
-const EditPost = (props) => {
-    console.log(props);
+const EditPost = ({match}) => {
+    console.log(match);
     const posts = useContext(PostContext);
-    const post = posts.find(o => o.id === 4); //match.params.id);
-    console.log(post);
+    const post = posts.find(o => o.id === match.params.id);
+    
     const [form, setForm] = useState({postContent: post.content});
     const navigate = useNavigate();
 
