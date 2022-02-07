@@ -1,38 +1,124 @@
-.App {
-  text-align: center;
+* {
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a {
+    text-decoration: none;
+    color: black;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.container {
+    width: 500px;
+    padding: 10px;
+    background-color: rgb(241, 241, 252);
+}
+
+.createBox {
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.btn {
+    display: block;
+    padding: 7px;
+    font-weight: bold;
+    color: white;
+    background-color: rgb(64, 64, 209);
+    border-radius: 5px;
+}
+
+.del {
+    background-color: red;
+    margin-left: 10px;
+}
+
+.post-container {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.postDetails {
+    color: grey;
+    display: flex;
+}
+
+.userPhoto {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+
+.userName {
+    margin-bottom: 5px;
+}
+
+.postContent {
+    font-size: 20px;
+    padding: 10px;
+}
+
+.singlePost {
+    width: 500px;
+    padding: 10px;
+    background-color: rgb(241, 241, 252);
+    margin: auto;
+}
+
+.close {
+    width: 2em;
+    height: 1.4em;
+    font-size: 10px;
+    position: absolute;
+    top: 0;
+    right: 0;  
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+
+.close:before, .close:after {
+    content: "";
+    background-color: rgb(94, 90, 90);
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 2em;
+    height: 0.2em;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .close:before {
+    transform: translate(-50%, -50%) rotate(45deg);
   }
-  to {
-    transform: rotate(360deg);
+  
+  .close:after {
+    transform: translate(-50%, -50%) rotate(-45deg);
   }
-}
+
+  .postInput {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .btnsBox {
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px;
+  }
+
+
