@@ -7,13 +7,14 @@ import ActivePost from './ActivePost';
 import NewPost from './NewPost';
 
 function App() {
+  
   return (
     <PostProvider>
       <Router>
         <div>
           <Routes>
             <Route exact path="/" element={<HomePage />} />
-            <Route path="/posts/editpost" element={<EditPost />} />
+            <Route path="/posts/editpost/:id" element={<EditPost />} />
             <Route path="/posts/new" element={<NewPost />} />
             <Route path="/posts/:id" element={<ActivePost />} />
           </Routes>

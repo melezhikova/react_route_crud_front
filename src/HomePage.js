@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { Link } from 'react-router-dom';
 import Post from "./Post";
 import PostContext from "./PostContext";

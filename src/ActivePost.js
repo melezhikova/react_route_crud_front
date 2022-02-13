@@ -1,13 +1,13 @@
 import { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import PostContext from "./PostContext";
 import user from '../src/img/user.png';
 import { format } from "date-fns";
 
-const ActivePost = ({match}) => {
-    console.log({match});
+const ActivePost = () => {
+    const params = useParams();
     const posts = useContext(PostContext);
-    const post = posts.find(o => o.id === match.params.id);
+    const post = posts.find(o => o.id === params.id * 1);
     const navigate = useNavigate();
 
     const time = new Date(post.created * 1);
@@ -36,7 +36,7 @@ const ActivePost = ({match}) => {
                 </div>
                 <div className='postContent'>{post.content}</div>
                 <div className="btnsBox">
-                    <Link to={'/posts/editpost'} id={post.id}>
+                    <Link to={`/posts/editpost/${post.id}`} >
                         <button type="button" className="btn">Изменить</button>
                     </Link>
                     <button type="button" className="btn del" onClick={deletePost}>Удалить</button>

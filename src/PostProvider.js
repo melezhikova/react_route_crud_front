@@ -8,14 +8,13 @@ function PostProvider (props) {
         fetch(process.env.REACT_APP_POSTS_URL)
         .then(response=>response.json())
         .then(posts => {
-            console.log(posts);
             setPosts([...posts])
         })
     }
 
     useEffect(() => {
         upload();
-    }, []);
+    }, [posts]);
     
     return (
         <PostContext.Provider value={posts}>
